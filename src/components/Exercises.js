@@ -3,6 +3,7 @@ import Pagination  from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 
 import { exerciseOptions, fetchData } from "../utils/fetchData.js";
+import ExerciseCard from "./ExerciseCard.js";
 
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
     return (
@@ -21,7 +22,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
                 flexWrap="wrap" justifyContent="center"
             >
                 {exercises.map((exercise, index) => (
-                    <p>{exercise.name}</p>
+                    <ExerciseCard key={index} exercise={exercise} />
                 ))
                 }
             </Stack>
