@@ -8,14 +8,17 @@ const Detail = ({ exerciseDetail }) => {
     const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
     const extraDetail = [
         {
+            key: bodyPart + 1,
             icon: BodyPartImage,
             name: bodyPart
         },
         {
+            key: bodyPart + 1,
             icon: TargetImage,
             name: target
         },
         {
+            key: bodyPart + 1,
             icon: EquipmentImage,
             name: equipment
         },
